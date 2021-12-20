@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello MyactivController!{% endblock %}
+
+{% block body %}
+    <img src="{{ asset('asset/logomyactivtransparent.png') }}" alt="logo"/>
+    <h1 class="text-center mt-5 mb-5">Bienvenue dans mon univers de Hobbies</h1>
+
+<div class="container">
+    <div class="row">
+        <section class="col-6">
+            <img src="{{ asset('asset/crochetpelotte.png') }}" alt="crochetpelotte"/>
+            <h2><a class="nav-link active" href="{{ path('crochet') }}">Crochet</a></h2>
+        </section>
+
+        <section  class="col-6">
+            <img src="{{ asset('asset/romans.png') }}" alt="romans"/>
+
+            <h2><a class="nav-link active" href="{{ path('reading') }}">Lecture</a></h2>
+        </section>
+    </div>
+</div>
+
+
+<section class="bikes text-center mt-5">
+    <img src="{{ asset('asset/velos.png') }}" alt="velos"/>
+
+    <h2><a class="nav-link active" href="{{ path('bikes') }}">Vélo</a></h2>
+</section>
+
+
+{% endblock %}
