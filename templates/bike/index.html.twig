@@ -12,15 +12,23 @@
 
     <h2>ici seront toute les images et description de mes balades velos</h2>
 
+
+
     <div class="container">
         <div class="row">
-            <div class="col-3">
-                <div class="card" style="width: 18rem">
-                    <div class="card-body">
-
+            {% for bike in bikes %}
+                <div class="col-4">
+                    <div class="card" style="width: 25rem;">
+                        <img src="{{ bike.image }}" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Nom :<strong>{{ bike.name }}</strong></h5>
+                            <p class="card-text">Lieu où pratiquer :<strong>{{ bike.location }}</strong></p>
+                            <p class="card-text">Vélo de : <strong>{{ bike.category }}</strong></p>
+                            <a href="#" class="btn btn-primary">Un bouton ?</a>
+                        </div>
                     </div>
                 </div>
-            </div>
+            {% endfor %}
         </div>
     </div>
 
