@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello BikeController!{% endblock %}
+
+{% block body %}
+    <header>
+        <img src="{{ asset('asset/logomyactivtransparent.png') }}" alt="logo"/>
+        <h1 class="text-center mt-5 mb-5">Mes balades en vélos 😉</h1>
+    </header>
+
+    <a class="nav-link active" href="{{ path('myactiv') }}">Accueil</a>
+
+    <h2>ici seront toute les images et description de mes balades velos</h2>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-3">
+                <div class="card" style="width: 18rem">
+                    <div class="card-body">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

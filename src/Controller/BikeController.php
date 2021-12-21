@@ -6,15 +6,15 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-class BikesController extends AbstractController
+class BikeController extends AbstractController
 {
     /**
-     * @Route("/bikes", name="bikes")
+     * @Route("/bike", name="bike")
      */
     public function index(): Response
     {
-        return $this->render('bikes/index.html.twig', [
-            'controller_name' => 'BikesController',
+        return $this->render('bike/index.html.twig', [
+            'controller_name' => 'BikeController',
         ]);
     }
 }

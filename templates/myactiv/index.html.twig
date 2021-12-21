@@ -3,29 +3,35 @@
 {% block title %}Hello MyactivController!{% endblock %}
 
 {% block body %}
+    <header>
     <img src="{{ asset('asset/logomyactivtransparent.png') }}" alt="logo"/>
     <h1 class="text-center mt-5 mb-5">Bienvenue dans mon univers de Hobbies</h1>
+    </header>
 
 <div class="container">
     <div class="row">
         <section class="col-6">
-            <img src="{{ asset('asset/crochetpelotte.png') }}" alt="crochetpelotte"/>
+            <a class="nav-link active" href="{{ path('crochet') }}">
+                <img src="{{ asset('asset/crochetpelotte.png') }}" alt="crochetpelotte"/>
+            </a>
             <h2><a class="nav-link active" href="{{ path('crochet') }}">Crochet</a></h2>
         </section>
 
         <section  class="col-6">
-            <img src="{{ asset('asset/romans.png') }}" alt="romans"/>
-
+            <a class="nav-link active" href="{{ path('reading') }}">
+                <img src="{{ asset('asset/romans.png') }}" alt="romans"/>
+            </a>
             <h2><a class="nav-link active" href="{{ path('reading') }}">Lecture</a></h2>
         </section>
     </div>
 </div>
 
 
-<section class="bikes text-center mt-5">
-    <img src="{{ asset('asset/velos.png') }}" alt="velos"/>
-
-    <h2><a class="nav-link active" href="{{ path('bikes') }}">Vélo</a></h2>
+<section class="text-center mt-5">
+    <a class="nav-link active" href="{{ path('bike') }}">
+        <img src="{{ asset('asset/velos.png') }}" alt="Vélos"/>
+    </a>
+    <h2><a class="nav-link active" href="{{ path('bike') }}">Vélos</a></h2>
 </section>
 
 
