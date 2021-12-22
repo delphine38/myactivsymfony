@@ -12,11 +12,11 @@ class CrochetController extends AbstractController
     /**
      * @Route("/crochet", name="crochet")
      */
-    public function index(CrochetRepository $repository): Response
+    public function index(CrochetRepository $crochetRepository): Response
     {
-        $crochet = $repository->findAll();
+        $crochets = $crochetRepository->findAll();
         return $this->render('crochet/index.html.twig', [
-            'crochet' => $crochet,
+            'crochets' => $crochets = $crochetRepository->findAll(),
         ]);
     }
 }

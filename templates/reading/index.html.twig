@@ -12,4 +12,23 @@
 
     <a class="nav-link active" href="{{ path('myactiv') }}">Accueil</a>
 
+
+    <div class="container">
+        <div class="row">
+            {% for reading in readings %}
+                <div class="col-4">
+                    <div class="card" style="width: 25rem;">
+                        <img src="{{ reading.image }}" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Nom :<strong>{{ reading.title }}</strong></h5>
+                            <p class="card-text">Lieu où pratiquer :<strong>{{ reading.author }}</strong></p>
+                            <p class="card-text">Vélo de : <strong>{{ reading.resumer }}</strong></p>
+                            <p class="card-text">Vélo de : <strong>{{ reading.numberpage }}</strong></p>
+                            <a href="#" class="btn btn-primary">Un bouton ?</a>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
 {% endblock %}
