@@ -2,37 +2,47 @@
 
 {% block title %}Hello MyactivController!{% endblock %}
 
+
 {% block body %}
     <header>
     <img src="{{ asset('asset/logomyactivtransparent.png') }}" alt="logo"/>
     <h1 class="text-center mt-5 mb-5">Bienvenue dans mon univers de Hobbies</h1>
+    <h3 class="essai">essai de lier le css</h3>
     </header>
 
 <div class="container">
     <div class="row">
-        <section class="col-6">
+        <section class="col-5">
             <a class="nav-link active" href="{{ path('crochet') }}">
                 <img src="{{ asset('asset/crochetpelotte.png') }}" alt="crochetpelotte"/>
             </a>
             <h2><a class="nav-link active" href="{{ path('crochet') }}">Crochet</a></h2>
         </section>
 
-        <section  class="col-6">
+        <section  class="col-5">
             <a class="nav-link active" href="{{ path('reading') }}">
                 <img src="{{ asset('asset/romans.png') }}" alt="romans"/>
             </a>
             <h2><a class="nav-link active" href="{{ path('reading') }}">Lecture</a></h2>
         </section>
+
+        <section class="col-5 text-center">
+            <a class="nav-link active" href="{{ path('bike') }}">
+                <img src="{{ asset('asset/velos.png') }}" alt="Vélos" width="40%"/>
+            </a>
+            <h2><a class="nav-link active" href="{{ path('bike') }}">Vélos</a></h2>
+        </section>
+
+        <section class="col-5 text-center">
+            <a class="nav-link active" href="{{ path('code') }}">
+                <img src="{{ asset('asset/angsymfmysqtran.png') }}" alt="code" width="40%"/>
+            </a>
+            <h2><a class="nav-link active" href="{{ path('code') }}">code</a></h2>
+        </section>
+
+
     </div>
 </div>
-
-
-<section class="text-center mt-5">
-    <a class="nav-link active" href="{{ path('bike') }}">
-        <img src="{{ asset('asset/velos.png') }}" alt="Vélos"/>
-    </a>
-    <h2><a class="nav-link active" href="{{ path('bike') }}">Vélos</a></h2>
-</section>
 
 
 {% endblock %}

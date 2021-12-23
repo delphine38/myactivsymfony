@@ -37,6 +37,11 @@ class Crochet
      */
     private $crochetimage;
 
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $imageprojetfini;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -86,6 +91,18 @@ class Crochet
     public function setCrochetimage(string $crochetimage): self
     {
         $this->crochetimage = $crochetimage;
+
+        return $this;
+    }
+
+    public function getImageprojetfini(): ?string
+    {
+        return $this->imageprojetfini;
+    }
+
+    public function setImageprojetfini(string $imageprojetfini): self
+    {
+        $this->imageprojetfini = $imageprojetfini;
 
         return $this;
     }

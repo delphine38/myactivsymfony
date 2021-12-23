@@ -12,7 +12,7 @@
     <a class="nav-link active" href="{{ path('myactiv') }}">Accueil</a>
 
 
-    <h2>ici seront toute les images et description de mes projets crochets</h2>
+    <h2>Voici mes projets réaliser 😉</h2>
 
 
     <div class="container">
@@ -20,11 +20,15 @@
             {% for crochet in crochets %}
                 <div class="col-4">
                     <div class="card" style="width: 25rem;">
-                        <img src="{{ crochet.crochetimage }}" class="card-img-top" alt="...">
-                        <img src="{{ crochet.pelotteimage }}" class="card-img-top" alt="...">
+                        <img src="{{ crochet.crochetimage }}"  alt="image crochet" width="40%">
+                        <img src="{{ crochet.pelotteimage }}" alt="image pelotte" width="40%">
                         <div class="card-body">
-                            <h5 class="card-title">Nom :<strong>{{ crochet.numbercrochet }}</strong></h5>
-                            <p class="card-text">Lieu où pratiquer :<strong>{{ crochet.pelottenumber }}</strong></p>
+                            <p class="card-text">Grâce à : <strong>{{ crochet.pelottenumber }} pelotte</strong> , du temps, et de l'envie</p>
+
+                            <p class="card-title">Et avec le crochet n° : <strong>{{ crochet.numbercrochet }}</strong></p>
+                            <p class="card-title">Vous réaliserez : votre super projet 👏 </p>
+                            <img src="{{ crochet.imageprojetfini }}"  alt="image crochet" width="40%">
+
                             <a href="#" class="btn btn-primary">Un bouton ?</a>
                         </div>
                     </div>
